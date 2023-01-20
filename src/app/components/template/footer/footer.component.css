@@ -2,12 +2,15 @@
     justify-content: right;
     position: fixed;
     bottom: 0;
+    height: 10%;
 }
 
 .logo {
-    width: 3.5rem;
+    width: 3rem;
 }
 
 span {
     padding-right: 1.5rem;
+    position: static;
+    bottom: 0;
 }
