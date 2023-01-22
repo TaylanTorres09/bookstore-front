@@ -14,6 +14,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import { CategoryReadComponent } from './components/views/category/category-read/category-read.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryReadComponent
   ],
   imports: [
     BrowserModule,
