@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./category-read.component.css']
 })
 export class CategoryReadComponent {
-
+  displayedColumns: string[] = ['id', 'name', 'description', 'action'];
 }
