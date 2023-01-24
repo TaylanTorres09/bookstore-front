@@ -14,8 +14,17 @@
     font-weight: 500;
 }
 
+button {
+    margin-bottom: .8rem;
+}
+
 .table {
     width: 100%;
+}
+
+.book {
+    color: rgb(37, 120, 240);
+    margin-left: .6rem;
 }
 
 .edit {
@@ -24,4 +33,9 @@
 
 .delete {
     color: rgb(228, 56, 56);
+    margin-left: .5rem;
+}
+
+.mat-header {
+    width: 6rem;
 }
