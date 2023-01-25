@@ -31,4 +31,8 @@ export class CategoryCreateComponent {
     });
   }
 
+  cancel(): void {
+    this.router.navigate(['category']);
+  }
+
 }
