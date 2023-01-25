@@ -17,4 +17,10 @@ export class CategoryService {
     const url = `${this.baseUrl}/category`;
     return this.http.get<Category[]>(url);
   }
+  
+  create(category: Category):Observable<Category> {
+    const url = `${this.baseUrl}/category/create`;
+    return this.http.post<Category>(url, category);
+  }
+
 }
