@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from '../category.model';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-category-delete',
@@ -6,5 +9,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./category-delete.component.css']
 })
 export class CategoryDeleteComponent {
+
+  category: Category = {
+    id: '',
+    name: '',
+    description: '',
+  }
+
+  constructor(private service: CategoryService, private router: Router, private route: ActivatedRoute) { }
+
+  ngOnInit(): void{
+    this.category.id = this.route.snapshot.paramMap.get('id')!;
+    this.findById()
+  }
+
+  findById(): void {
+    this.service.findById(this.category.id!).subscribe(resp => {
+      this.category.name = resp.name;
+      this.category.description = resp.description;
+    })
+  }
+
+  cancel(): void {
+    this.router.navigate(['category']);
+  }
 
 }
