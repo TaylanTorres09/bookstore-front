@@ -18,6 +18,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import { CategoryCreateComponent } from './components/views/category/category-create/category-create.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatTableModule} from '@angular/material/table';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CategoryReadComponent
+    CategoryReadComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,
