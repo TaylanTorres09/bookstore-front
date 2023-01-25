@@ -25,9 +25,20 @@ export class CategoryDeleteComponent {
 
   findById(): void {
     this.service.findById(this.category.id!).subscribe(resp => {
+      console.log(resp)
       this.category.name = resp.name;
       this.category.description = resp.description;
     })
+  }
+
+  delete(): void {
+    this.service.delete(this.category.id!).subscribe(resp => {
+      console.log(this.category.id);
+      this.router.navigate(['category']);
+      this.service.mesage('Categoria removida com sucesso!');
+    },err => {
+      this.service.mesage(err.error.error);
+    });
   }
 
   cancel(): void {
