@@ -1,7 +1,7 @@
-export interface book {
+export interface Book {
     id?: String;
     title: String;
     author: String;
     text: String;
-    categoryId: String;
+    categoryId?: String;
 }
