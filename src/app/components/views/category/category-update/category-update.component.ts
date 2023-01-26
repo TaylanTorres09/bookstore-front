@@ -42,4 +42,8 @@ export class CategoryUpdateComponent {
     });
   }
 
+  cancel(): void {
+    this.router.navigate(['category']);
+  }
+
 }
