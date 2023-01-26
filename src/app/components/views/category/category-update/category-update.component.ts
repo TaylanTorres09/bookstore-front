@@ -37,7 +37,7 @@ export class CategoryUpdateComponent {
         this.service.mesage(`Categoria ${this.category.id} atualizada com sucesso`);
       },
       error: (error) => {
-        console.log(error);
+        this.service.mesage(error.error.errors[0].message);
       }
     });
   }
