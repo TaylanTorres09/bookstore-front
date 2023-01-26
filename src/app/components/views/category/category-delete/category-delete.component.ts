@@ -37,7 +37,6 @@ export class CategoryDeleteComponent {
         this.service.mesage(`Categoria ${this.category.name} removida com sucesso!`);
       },
       error: (error) => {
-        console.log(error)
         this.service.mesage(error.error.error);
       }
     });
