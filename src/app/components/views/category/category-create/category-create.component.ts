@@ -21,12 +21,15 @@ export class CategoryCreateComponent {
   }
 
   create(): void {
-    this.service.create(this.category).subscribe(resp => {
-      this.router.navigate(['category']);
-      this.service.mesage('Categoria criada com sucesso!');
-    }, err => {
-      for(let i = 0; i < err.error.errors.length; i++) {
-        this.service.mesage(err.error.errors[i].message);
+    this.service.create(this.category).subscribe({
+      next: resp => {
+        this.router.navigate(['category']);
+        this.service.mesage('Categoria criada com sucesso!');
+      },
+      error: err => {
+        for(let i = 0; i < err.error.errors.length; i++) {
+          this.service.mesage(err.error.errors[i].message);
+        }
       }
     });
   }
