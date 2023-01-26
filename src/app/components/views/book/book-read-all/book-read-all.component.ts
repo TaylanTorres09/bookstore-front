@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-read-all.component.css']
 })
 export class BookReadAllComponent {
+  displayedColumns: string[] = ['id', 'title', 'books', 'action'];
 
 }
