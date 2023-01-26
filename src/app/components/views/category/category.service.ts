@@ -29,9 +29,9 @@ export class CategoryService {
     return this.http.post<Category>(url, category);
   }
 
-  delete(id: String):Observable<void> {
+  delete(id: String):Observable<string> {
     const url = `${this.baseUrl}/category/delete/${id}`;
-    return this.http.delete<void>(url);
+    return this.http.delete<string>(url);
   }
 
   mesage(str: String): void {
