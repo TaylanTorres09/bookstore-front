@@ -3,21 +3,21 @@
 
     <mat-form-field class="form">
         <mat-label>Titulo</mat-label>
-        <input matInput [(ngModel)]="book.title" type="text" name="title" placeholder="Ex.  Mentalidades Matemáticas">
+        <input matInput [(ngModel)]="book.title" type="text" name="title" placeholder="Ex.  Mentalidades Matemáticas" maxlength="100">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Autor</mat-label>
-        <input matInput [(ngModel)]="book.author" type="text" name="author" placeholder="Ex. Jo Boaler">
+        <input matInput  [(ngModel)]="book.author" type="text" name="author" placeholder="Ex. Jo Boaler" maxlength="100">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Texto</mat-label>
-        <textarea matInput [(ngModel)]="book.text" type="text" name="text" placeholder="Ex. Estimulando o Potencial..."></textarea>
+        <textarea matInput [(ngModel)]="book.text" type="text" name="text" placeholder="Ex. Estimulando o Potencial..." maxlength="1000000"></textarea>
     </mat-form-field>
 
     <div class="buttons">
-        <button class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
+        <button (click)="create()" class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
         <button class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
     </div>
 
