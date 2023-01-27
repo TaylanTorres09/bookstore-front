@@ -19,6 +19,11 @@ export class BookService {
     return this.http.get<Book[]>(url);
   }
 
+  findByIdBook(id: String): Observable<Book> {
+    const url = `${this.baseUrl}/book/${id}`;
+    return this.http.get<Book>(url);
+  }
+
   create(book: Book): Observable<Book> {
     const url = `${this.baseUrl}/book/create`;
     return this.http.post<Book>(url, book);
