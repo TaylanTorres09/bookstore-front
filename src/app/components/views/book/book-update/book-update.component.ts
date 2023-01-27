@@ -10,21 +10,38 @@ import { BookService } from '../book.service';
 })
 export class BookUpdateComponent {
 
+  categoryId: String = '';
+
   book: Book = {
+    id: '',
     title: '',
     author: '',
     text: '',
-    categoryId: ''
   }
 
   constructor (private service: BookService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.book.categoryId = this.route.snapshot.paramMap.get('catId')!;
+    this.categoryId = this.route.snapshot.paramMap.get('catId')!;
+    this.book.id = this.route.snapshot.paramMap.get('id')!;
+    this.findById();
+  }
+
+  findById(): void {
+    this.service.findByIdBook(this.book.id!).subscribe({
+      next: resp => {
+        this.book = resp;
+      },
+      error: err => {
+        this.router.navigate([`category/${this.categoryId}/book`]);
+        console.log(err);
+        this.service.mesage('Erro na identificação do livro');
+      }
+    });
   }
 
   cancel(): void {
-    this.router.navigate([`category/${this.book.categoryId}/book`]);
+    this.router.navigate([`category/${this.categoryId}/book`]);
   }
 
 }
