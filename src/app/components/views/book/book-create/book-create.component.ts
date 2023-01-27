@@ -36,4 +36,8 @@ export class BookCreateComponent {
     });
   }
 
+  cancel(): void {
+    this.router.navigate([`category/${this.book.categoryId}/book`]);
+  }
+
 }
