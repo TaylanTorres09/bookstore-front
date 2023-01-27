@@ -40,6 +40,18 @@ export class BookUpdateComponent {
     });
   }
 
+  update(): void {
+    this.service.update(this.book).subscribe({
+      next: () => {
+        this.router.navigate([`category/${this.categoryId}/book`]);
+        this.service.mesage(`Livro ${this.book.id} atualizado com sucesso!`);
+      },
+      error: err => {
+        this.service.mesage(err.error.errors[0].message);
+      }
+    });
+  }
+
   cancel(): void {
     this.router.navigate([`category/${this.categoryId}/book`]);
   }
