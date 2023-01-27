@@ -28,7 +28,7 @@ export class BookCreateComponent {
     this.service.create(this.book).subscribe({
       next: () => {
         this.router.navigate([`category/${this.book.categoryId}/book`]);
-        this.service.mesage(`Livro ${this.book.text} criado com sucesso!`);
+        this.service.mesage(`Livro ${this.book.title} criado com sucesso!`);
       },
       error: err => {
         this.service.mesage(err.error.errors[0].message);
