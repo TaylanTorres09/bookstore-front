@@ -40,6 +40,19 @@ export class BookDeleteComponent {
     });
   }
 
+  delete(): void {
+    this.service.delete(this.book.id!).subscribe({
+      next: () => {
+        this.router.navigate([`category/${this.categoryId}/book`]);
+        this.service.mesage('Livro deletado com sucesso!');
+      },
+      error: () => {
+        this.router.navigate([`category/${this.categoryId}/book`]);
+        this.service.mesage('Falha ao deletar!');
+      }
+    });
+  }
+
   cancel(): void {
     this.router.navigate([`category/${this.categoryId}/book`]);
   }
