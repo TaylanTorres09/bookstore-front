@@ -1,27 +1,36 @@
 # BookstoreFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+## Descrição do Projeto
 
-## Development server
+Projeto consiste na criação de intefaces web utilizando [Angular](https://github.com/angular/angular-cli) na versão 15.1.2 para uma livraria, onde os livros de diversas categorias são cadastrados, atualizados, deletados e lidos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para execução desse projeto precisasse consumir a api [book-store-api](https://github.com/TaylanTorres09/book-store-api) feita pelo autor desse mesmo projeto, por enquanto não foi feito deploy.
 
-## Code scaffolding
+Qualquer dúvida pode me contatar pelo [LinkedIn](https://www.linkedin.com/in/taylan-torres/) ou por email: taylantorres@gmail.com
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Descrição
+### Executar front-end localmente:
+- Para clonar o projeto: git clone https://github.com/TaylanTorres09/bookstore-front.git
+- Para Executar o projeto precisasse:
+    - [NodeJS](https://nodejs.org/en/). Este projeto está usando a versão 18.12.1 ou superior.
+    - [NPM](https://www.npmjs.com/). Versão 9.3.1
+    - [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+    - Como editor de código utilizei o [Visual Studio Code](https://code.visualstudio.com/).
+    - Executar api [book-store-api](https://github.com/TaylanTorres09/book-store-api) localmente.
 
-## Build
+- Depois de instalados **EXECUTAR** comandos no seu terminal:
+    - npm install.
+    - npm -i -g @angular/cli
+    - ng serve.
+    - Após estes comandos o projeto será executado em um servido de desenvolvimento.
+    - Poderá ser acessado na url: `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Páginas - Clique na imagem e será redirecionado para vídeo.
 
-## Running unit tests
+[![Páginas](README_IMG/HOME.png)](https://drive.google.com/file/d/1LGjFWnk0JyApeGFMjQgjVxha5eQYOMo6/view?usp=share_link)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Próximos Passos
+- Implementar Cobertura de testes.
+- Fazer Deploy.
+## Autor
+<a href="https://www.linkedin.com/in/taylan-torres" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
