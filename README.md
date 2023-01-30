@@ -25,7 +25,7 @@ Qualquer dúvida pode me contatar pelo [LinkedIn](https://www.linkedin.com/in/ta
     - Após estes comandos o projeto será executado em um servido de desenvolvimento.
     - Poderá ser acessado na url: `http://localhost:4200/`.
 
-## Páginas - Clique na imagem e será redirecionado para vídeo.
+#### Páginas - Clique na imagem e será redirecionado para vídeo.
 
 [![Páginas](README_IMG/HOME.png)](https://drive.google.com/file/d/1LGjFWnk0JyApeGFMjQgjVxha5eQYOMo6/view?usp=share_link)
 
